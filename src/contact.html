@@ -74,7 +74,7 @@
         </div>
         <div class="pt-8">
             <div class="flex relative overflow-hidden"> 
-                <form id="contactForm" class="rounded-2xl mr-4 bg-white w-1/2 p-8">
+                <form action="#"  class="rounded-2xl mr-4 bg-white w-1/2 p-8">
                     <h4>GET IN TOUCH</h4>
                     <div class="mt-5">
                         <input type="text" id="name" class="border border-[#E3E3E3] rounded-lg focus:ring-primary focus:border-primary block w-full px-4 py-3" placeholder="Name" required />
@@ -162,41 +162,36 @@
       </div>
     </div>
     
+   <script>
+    Email.send({
+        Host : "smtp.mailendo.com",
+        Username : "abduljalilpbn@gmail.com",
+        Password : "04BB0832ABA9B7D5305A6F009F7A083EE47A",
+        To : 'abduljalilpbn@gmail.com',
+        From : "ashikpro.dev@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+    message => alert(message)
+    );
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        Email.send({
+            Host : "smtp.mailendo.com",
+            Username : "abduljalilpbn@gmail.com",
+            Password : "04BB0832ABA9B7D5305A6F009F7A083EE47A",
+            To : 'abduljalilpbn@gmail.com',
+            From : "ashikpro.dev@gmail.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+        message => alert(message)
+        );
+        
+    });
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-    <script>
-      (function () {
-        emailjs.init("_2Db_5uIb-eNLH2Ko"); // Replace with your EmailJS Public Key
-      })();
+   </script>
     
-      document.getElementById("contactForm").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the default form submission
-    
-        // Collect form data
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-    
-        // Send form data using EmailJS
-        emailjs
-          .send("service_xmbvkj1", "template_a7stdhq", {
-            name: name,
-            email: email,
-            message: message,
-          })
-          .then(
-            function (response) {
-              alert("Message sent successfully! Thank you for contacting us.");
-              document.getElementById("contactForm").reset(); // Reset the form
-            },
-            function (error) {
-              alert("Failed to send message. Please try again later.");
-              console.error("EmailJS error:", error);
-            }
-          );
-      });
-    </script>
     
 </body>
 </html>
