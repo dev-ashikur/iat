@@ -1,0 +1,14 @@
+{
+  "name": "iat",
+  "version": "1.0.0",
+  "main": "index.js",
+ "scripts": {
+    "build": "npx tailwindcss -i src/input.css -o src/output.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

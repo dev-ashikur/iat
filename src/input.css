@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+@layer base {
+    html {
+        font-family: "Kumbh Sans", serif;
+    }
+    body  h1, h2, h3, h4, h5, h6, p, a {
+        font-family: "Kumbh Sans", serif;
+      }
+}
+.container {
+    width: 100%;
+    max-width: 1495px;
+    margin: auto;
+    padding: 0 135px;
+}
+@media (min-width: 640px) {
+    .container {
+        max-width: 600px;
+        padding: 0;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 700px;
+        padding: 0;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        max-width: 980px;
+        padding: 0;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1180px;
+        padding: 0;
+    }
+}
+
+h1{
+    font-size: 46px;
+}
+h2{
+    font-size: 38px;
+}
+h3{
+    font-size: 30px;
+}
+h4{
+    font-size: 22px;
+}
+p{
+    font-size: 18px;
+}
+a{
+    font-size: 18px;
+}
+.hero{
+    background-image: url('./img/hero_bg.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 676px;
+}
+.IAT-Solutions{ 
+    background-image: url('./img/Solution.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.client{
+     background-image: url('./img/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.banner{
+    background-image: url('./img/about.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.cisco{
+    background-image: url('./img/btm.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.box{
+    width: 31.31%;
+}
+.core{
+    background-image: url('./img/core.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.cisco ul li{
+    list-style-type: disc;
+    color: white;
+}
+
+/* accordion style  */
+
+.accordion {
+    padding: 0 135px;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.accordion-bg {
+    width: 100%;
+}
+
+.accordion-content {
+    display: none; /* Hidden by default */
+    margin-left: 34%;
+    top: 120px;
+    position: absolute;
+    width: 65%;
+    padding-right: 62%;
+}
+
+.title {
+    cursor: pointer;
+    width: 30%;
+    position: relative;
+    color: #161616;
+    border-right: 1px solid #1B1464;
+}
+
+.title h4{
+    padding: 24px;
+    /* transition: all 0.3s ease-in-out; */
+}
+.title h4:hover{
+    border-radius: 8px;
+    /* border-right: 4px solid #1B1464; */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: rgba(27, 20, 100, 0.1);
+    color: #1B1464;
+    /* transition: all 0.3s ease-in-out; */
+}
+
+.sub-title {
+    font-weight: bold;
+    width: 252px;
+    height: auto;
+    margin-right: 390px;    
+    border-right: 1px solid;
+    transition: all 0.3s ease-in-out;
+}
+
+.sub-title p {
+    padding: 24px;
+    border-radius: 8px;
+    width: 252px;
+    color: #161616;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: 500;
+}
+.sub-title p:hover {
+    color: #1B1464;
+    transition: all 0.3s ease-in-out;
+    background: rgba(27, 20, 100, 0.1);
+}
+
+.content {
+    display: none;
+    margin-top: 10px;
+    margin-left: 270px;
+    position: absolute;
+    top: 30%;
+    transition: all 0.3s ease-in-out;
+}
+
+.content ul{
+    border-left: 1px solid #1B1464;
+    padding-left: 32px;
+}
+
+.content ul li{
+    list-style: disc;
+    color: #666666;
+    padding-right: 30px;
+    font-weight: 400;
+}
+
+.accordion-content.open {
+    display: block;
+}
+
+.content.open {
+    display: block;
+}
+
+/* border style  */
+.title h4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 0;
+    background: #1B1464; /* Color of the border */
+    transition: height .4s;
+  }
+  
+.title h4:hover::after {
+    height: 100%;
+  }

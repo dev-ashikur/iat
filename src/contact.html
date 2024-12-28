@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <script src="https://kit.fontawesome.com/44bb6c6c31.js" crossorigin="anonymous"></script>
+    </script>
+    <title>Document</title>
+</head>
+<body class="bg-light_gray">
+    <nav class="w-full container z-20 top-0 start-0">
+        <div class="max-w-[1410px] flex flex-wrap items-center justify-between mx-auto py-6">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="./img/iat_training_logo4 2.png" class="h-8" alt="IAT">
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button type="button" class="text-white bg-primary hover:text-white bg-blue-700 hover:bg-blue px-8 py-3.5 rounded-lg ">Get started</button>
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
+            <li>
+                <a href="#" class="block py-2 px-3 transition duration-700 ease-in-out hover:text-decoration-line: underline; text-decoration-style: solid; text-decoration-color: currentColor; text-txt_black hover:text-primary aria-current="page">Home</a>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-3 transition duration-700 ease-in-out hover:text-decoration-line: underline; text-decoration-style: solid; text-decoration-color: currentColor; text-txt_black hover:text-primary">About</a>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-3 transition duration-700 ease-in-out hover:text-decoration-line: underline; text-decoration-style: solid; text-decoration-color: currentColor; text-txt_black hover:text-primary">Services</a>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-3 transition duration-700 ease-in-out hover:text-decoration-line: underline; text-decoration-style: solid; text-decoration-color: currentColor; text-txt_black hover:text-primary">Contact Us</a>
+            </li>
+        </ul>
+        </div>
+        </div>
+    </nav>
+
+    <div class="px-24  max-w-[1495px] mx-auto">
+        <div class="banner relative rounded-3xl p-24 text-center">
+            <h2 class="text-white">Contact Us</h2>
+            <img class="absolute top-7 -left-5" src="img/yellow.png" alt="">
+        </div>
+    </div>
+    <div class="container px-14 !pt-32">
+        <div class="flex flex-wrap gap-6">
+            <div class="box mlr-auto bg-white p-6 rounded-2xl flex gap-3 items-center">
+                <img src="img/pin.png" alt="">
+                <div class="">
+                    <p class="font-extrabold mb-2">Address</p>
+                    <p>2156 S Archer Ave, Chicago.</p>
+                </div>
+            </div>
+            <div class="box ml-auto bg-white p-6 rounded-2xl flex gap-3 items-center">
+                <img src="img/pin.png" alt="">
+                <div class="">
+                    <p class="font-extrabold mb-2">Address</p>
+                    <p>2156 S Archer Ave, Chicago.</p>
+                </div>
+            </div>
+            <div class="box ml-auto bg-white p-6 rounded-2xl flex gap-3 items-center">
+                <img src="img/pin.png" alt="">
+                <div class="">
+                    <p class="font-extrabold mb-2">Address</p>
+                    <p>2156 S Archer Ave, Chicago.</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt-8">
+            <div class="flex relative overflow-hidden"> 
+                <form id="contactForm" class="rounded-2xl mr-4 bg-white w-1/2 p-8">
+                    <h4>GET IN TOUCH</h4>
+                    <div class="mt-5">
+                        <input type="text" id="name" class="border border-[#E3E3E3] rounded-lg focus:ring-primary focus:border-primary block w-full px-4 py-3" placeholder="Name" required />
+                      </div>
+                    <div class="mt-8">
+                      <input type="email" id="email" class="border border-[#E3E3E3] rounded-lg focus:ring-primary focus:border-primary block w-full px-4 py-3"placeholder="Email" required />
+                    </div>
+                    <div class="mt-8">
+                        <input id="message" class="border border-[#E3E3E3] rounded-lg focus:border-primary block w-full px-4 py-3" placeholder="Message"/>
+                    </div>
+                    <button type="submit" class="mt-8 text-white bg-[#2C21A1] rounded-lg  w-full sm:w-auto py-4 text-center px-10">SEND MESSAGE</button>
+                </form>
+                
+                <!-- Popup Notification -->
+                <div id="popup" class="hidden z-10 pl-32 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                      <p id="popupMessage" class="text-lg"></p>
+                      <button onclick="closePopup()" class="mt-4 bg-primary text-white px-4 py-2 rounded-lg">Close</button>
+                    </div>
+                  </div>
+                
+                  <!-- Loading Spinner -->
+                  <div id="loadingMessage" class="hidden z-10 pl-32 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                      <p class="text-lg font-bold">Wait, SMS sending...</p>
+                      <div class="mt-4 animate-spin h-8 w-8 border-4 border-t-4 border-primary rounded-full"></div>
+                    </div>
+                  </div>
+                  
+                <div class="map w-1/2 ml-4 z-0 relative">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.8252382954815!2d-87.63692128992997!3d41.85358827112446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c619bdca897%3A0xb94895d1760f9923!2s2156%20S%20Archer%20Ave%2C%20Chicago%2C%20IL%2060616%2C%20USA!5e0!3m2!1sen!2sbd!4v1735134140985!5m2!1sen!2sbd" width="100%" height="100%" style="border:0; border-radius: 16px; position: relative;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer  -->
+    <div class="w-full pt-16 mt-32 pb-28  mx-auto bg-black">
+      <footer class="container mx-auto flex">
+        <div class="w-4/12 pr-16 mr-auto">
+            <img src="img/logow.png" alt="">
+            <p class="text-light_gray pt-6">At IAT Solutions, we specialize in network engineering, cloud solutions, and hardware infrastructure, delivering reliable and innovative IT services to empower businesses for the future.</p>
+        </div>
+        <div class="w-1/12 mx-auto">
+            <p href="#" class="text-gray-300">About</p>
+            <ul class="">
+                <li><a href="#" class="cursor-pointer inline-block text-light_gray mt-6 mb-4">About us</a></li>
+                <li><a href="#" class="cursor-pointer inline-block text-light_gray mb-4">Service</a></li>
+                <li><a href="#" class="cursor-pointer inline-block text-light_gray mb-4">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="w-2/12 mx-auto">
+            <p href="#" class="text-gray-300">Resources</p>
+            <ul class="">
+                <li><a href="" class="cursor-pointer inline-block text-light_gray mt-6 mb-4">Clients</a></li>
+                <li><a href="" class="cursor-pointer inline-block text-light_gray mb-4">Help Center</a></li>
+                <li><a href="" class="cursor-pointer inline-block text-light_gray mb-4">Enterprice Solutions</a></li>
+                <li><a href="" class="cursor-pointer inline-block text-light_gray mb-4">Enterprice Solutions</a></li>
+            </ul>
+        </div>
+        <div class="w-3/12 mx-auto">
+            <p class="text-gray-300">About us</p>
+            <p class="text-light_gray mt-6 mb-4">You can contact us to send the email</p>
+            <form action="mailto:someone@example.com">
+                <div class="flex w-[277px] relative justify-between items-center">
+                        <input class="border bg-transparent text-white rounded-lg border-light_gray px-3 py-2" type="email" placeholder="Your email">
+                    <div class="absolute right-[72px]">
+                        <input class="absolute  text-transparent cursor-pointer" type="submit" value="sd">
+                        <i class="inline-block text-white fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+      </footer>
+    </div>
+    <div class="bg-blue  py-6 ">
+      <div class="container mx-auto flex justify-between">
+        <p class="text-light_gray">© 2027 IAT Solutions. All rights reserved.</p>
+        <div class="icons">
+            <i class="text-white text-2xl mx-3 fa-brands fa-twitter"></i>
+            <i class="text-white text-2xl mx-3 fa-brands fa-linkedin"></i>
+            <i class="text-white text-2xl mx-3 fa-brands fa-facebook"></i>
+            <i class="text-white text-2xl mx-3 fa-brands fa-github"></i>
+            <i class="text-white text-2xl mx-3 fa-brands fa-dribbble"></i>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script>
+      (function () {
+        emailjs.init("_2Db_5uIb-eNLH2Ko"); // Replace with your EmailJS Public Key
+      })();
+    
+      document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        // Collect form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+    
+        // Send form data using EmailJS
+        emailjs
+          .send("service_xmbvkj1", "template_a7stdhq", {
+            name: name,
+            email: email,
+            message: message,
+          })
+          .then(
+            function (response) {
+              alert("Message sent successfully! Thank you for contacting us.");
+              document.getElementById("contactForm").reset(); // Reset the form
+            },
+            function (error) {
+              alert("Failed to send message. Please try again later.");
+              console.error("EmailJS error:", error);
+            }
+          );
+      });
+    </script>
+    
+</body>
+</html>
