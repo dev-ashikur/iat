@@ -808,10 +808,6 @@ body  h1, h2, h3, h4, h5, h6, p, a {
   z-index: 30;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
 .row-span-1 {
   grid-row: span 1 / span 1;
 }
@@ -922,10 +918,6 @@ body  h1, h2, h3, h4, h5, h6, p, a {
   margin-top: 190px;
 }
 
-.mt-\[32\] {
-  margin-top: 32;
-}
-
 .mt-\[240px\] {
   margin-top: 240px;
 }
@@ -1026,8 +1018,8 @@ body  h1, h2, h3, h4, h5, h6, p, a {
   width: 40%;
 }
 
-.w-\[47\%\] {
-  width: 47%;
+.w-\[48\.5\%\] {
+  width: 48.5%;
 }
 
 .w-\[500px\] {
@@ -1062,68 +1054,16 @@ body  h1, h2, h3, h4, h5, h6, p, a {
   width: 100%;
 }
 
-.w-\[48\%\] {
-  width: 48%;
-}
-
-.w-\[4\%\] {
-  width: 4%;
-}
-
-.w-\[47\.1\%\] {
-  width: 47.1%;
-}
-
-.w-\[47\.2\%\] {
-  width: 47.2%;
-}
-
-.w-\[471\%\] {
-  width: 471%;
-}
-
-.w-\[47\.\%\] {
-  width: 47.%;
-}
-
-.w-\[47\.3\%\] {
-  width: 47.3%;
-}
-
-.w-\[47\.5\%\] {
-  width: 47.5%;
-}
-
-.w-\[47\.4\%\] {
-  width: 47.4%;
-}
-
-.w-\[45\%\] {
-  width: 45%;
-}
-
-.w-\[49\%\] {
-  width: 49%;
-}
-
-.w-\[48\.5\%\] {
-  width: 48.5%;
-}
-
 .max-w-\[1410px\] {
   max-width: 1410px;
 }
 
-.max-w-\[1900px\] {
-  max-width: 1900px;
+.max-w-\[1495px\] {
+  max-width: 1495px;
 }
 
 .max-w-\[454px\] {
   max-width: 454px;
-}
-
-.max-w-\[1495px\] {
-  max-width: 1495px;
 }
 
 @keyframes spin {
@@ -1357,6 +1297,11 @@ body  h1, h2, h3, h4, h5, h6, p, a {
   padding: 18px;
 }
 
+.\!py-32 {
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1375,11 +1320,6 @@ body  h1, h2, h3, h4, h5, h6, p, a {
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
-}
-
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 
 .px-24 {
@@ -1437,11 +1377,6 @@ body  h1, h2, h3, h4, h5, h6, p, a {
   padding-bottom: 0.875rem;
 }
 
-.py-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1472,14 +1407,8 @@ body  h1, h2, h3, h4, h5, h6, p, a {
   padding-bottom: 60px;
 }
 
-.\!py-32 {
+.\!pt-32 {
   padding-top: 8rem !important;
-  padding-bottom: 8rem !important;
-}
-
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 .pb-28 {
@@ -1528,18 +1457,6 @@ body  h1, h2, h3, h4, h5, h6, p, a {
 
 .pt-8 {
   padding-top: 2rem;
-}
-
-.pt-\[240px\] {
-  padding-top: 240px;
-}
-
-.\!pt-32 {
-  padding-top: 8rem !important;
-}
-
-.\!pt-16 {
-  padding-top: 4rem !important;
 }
 
 .text-left {

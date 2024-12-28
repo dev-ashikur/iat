@@ -161,37 +161,47 @@
         </div>
       </div>
     </div>
-    
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    <script>
-    Email.send({
-        Host : "smtp.mailendo.com",
+    const form = document.querySelector('form');
+    const name = document.querySelector('name');
+    const email = document.querySelector('email');
+    const mess = document.querySelector('message');
+
+    function sendEmail() {
+      const bodyMessage = `
+      Name: ${name.value}
+      Email: ${email.value}
+      Message: ${mess.value}
+      `;
+      Email.send({
+        Host : "smtp.elasticemail.com",
         Username : "abduljalilpbn@gmail.com",
         Password : "04BB0832ABA9B7D5305A6F009F7A083EE47A",
-        To : 'abduljalilpbn@gmail.com',
-        From : "ashikpro.dev@gmail.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
-    }).then(
-    message => alert(message)
+        To : "abduljalilpbn@gmail.com",
+        From : "bduljalilpbn@gmail.com",
+        Subject : "subject",
+        Body : bodyMessage
+      }).then(
+        message => {
+            if (message == "OK") {
+                Swal.fire({
+                title: "Good job!",
+                text: "Message sent successfully",
+                icon: "Success",
+                });
+            }
+        }
     );
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        Email.send({
-            Host : "smtp.mailendo.com",
-            Username : "abduljalilpbn@gmail.com",
-            Password : "04BB0832ABA9B7D5305A6F009F7A083EE47A",
-            To : 'abduljalilpbn@gmail.com',
-            From : "ashikpro.dev@gmail.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
-        }).then(
-        message => alert(message)
-        );
-        
-    });
+    }
 
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      sendEmail();
+    });
    </script>
-    
-    
 </body>
 </html>
